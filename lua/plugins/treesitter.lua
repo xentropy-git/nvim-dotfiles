@@ -74,5 +74,13 @@ return {
   ---@param opts TSConfig
   config = function(_, opts)
     require("nvim-treesitter.configs").setup(opts)
+    local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
+    parser_config.mojo = {
+            install_info = {
+                url = "lsh/tree-sitter-mojo"
+            },
+            filetype = "mojo",
+
+        }
   end,
 }
