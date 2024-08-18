@@ -8,5 +8,10 @@
         "diagnostics": {
         "globals": [ "vim" ]
         }  
-    }
+    },
+    "python.venvPath": "${env:HOME/.devenv/}",
+    "python.formatting.provider": "black",
+    "python.formatting.blackPath": "${env:HOME}/.devenv/bin/black",
+    "coc.preferences.formatOnSaveFiletypes": ["python", "lua"]
 }
+
