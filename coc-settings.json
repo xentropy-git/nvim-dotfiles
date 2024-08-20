@@ -12,6 +12,13 @@
     "python.venvPath": "${env:HOME/.devenv/}",
     "python.formatting.provider": "black",
     "python.formatting.blackPath": "${env:HOME}/.devenv/bin/black",
-    "coc.preferences.formatOnSaveFiletypes": ["python", "lua"]
+    "coc.preferences.formatOnSaveFiletypes": ["python", "lua"],
+    "languageserver": {
+        "csharp-ls": {
+            "command": "csharp-ls",
+            "filetypes": ["cs", "razor", "razor.cs"],
+            "rootPatterns": ["*.csproj", ".vim/", ".git/", ".hg/"]
+        }
+    }
 }
 

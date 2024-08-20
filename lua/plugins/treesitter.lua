@@ -29,6 +29,7 @@ return {
     ensure_installed = {
       "bash",
       "c",
+      "c_sharp",
       "diff",
       "htmldjango",
       "javascript",
@@ -40,7 +41,6 @@ return {
       "luap",
       "markdown",
       "markdown_inline",
-      "printf",
       "python",
       "query",
       "regex",

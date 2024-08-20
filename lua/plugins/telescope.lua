@@ -17,5 +17,5 @@ return {
                 require('telescope.builtin').live_grep()
             end,
         }
-    }
+    },
 }

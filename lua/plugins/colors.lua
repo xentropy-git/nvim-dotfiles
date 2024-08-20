@@ -7,6 +7,8 @@ return {
     config = function()
       -- load the colorscheme here
       vim.cmd([[colorscheme tokyonight]])
+            -- set background transparent
+      vim.cmd([[highlight Normal guibg=NONE ctermbg=NONE]])
     end,
   },
 }
