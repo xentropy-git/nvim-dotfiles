@@ -2,7 +2,8 @@ return {
     'nvim-telescope/telescope.nvim',
     dependencies = { 
         'nvim-lua/plenary.nvim',
-        'BurntSushi/ripgrep',
+        'nvim-tree/nvim-web-devicons',
+        {'nvim-telescope/telescope-fzf-native.nvim', build = "make" },
     },
     keys = {
         {
@@ -18,4 +19,22 @@ return {
             end,
         }
     },
+    config = function()
+        local actions = require('telescope.actions')
+        local telescope = require('telescope')
+        telescope.setup {
+            defaults = {
+                path_display = { "smart" },
+                mappings = {
+                    i = {
+                        ["<esc>"] = actions.close,
+                        ["<C-j>"] = actions.move_selection_next,
+                        ["<C-k>"] = actions.move_selection_previous,
+                        ["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
+                    },
+                },
+            },
+        }
+        telescope.load_extension('fzf')
+    end,
 }
