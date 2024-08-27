@@ -12,6 +12,9 @@ return {
 
         local keymap = vim.keymap -- for conciseness
 
+        -- MANUAL LSPS
+        local manual_servers = { "mojo" }
+
         vim.api.nvim_create_autocmd("LspAttach", {
         group = vim.api.nvim_create_augroup("UserLspConfig", {}),
         callback = function(ev)
@@ -98,6 +101,12 @@ return {
         end,
         })
 
+        -- setup manual servers
+        for _, server_name in ipairs(manual_servers) do
+            lspconfig[server_name].setup({
+                capabilities = capabilities,
+            })
+        end
     end,
 
 }

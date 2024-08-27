@@ -7,7 +7,7 @@ return {
         local nvimtree = require("nvim-tree")
 
         nvimtree.setup({
-           open_on_tab = false,
+            open_on_tab = false,
             hijack_cursor = false,
             update_focused_file = {
                 enable = true,
@@ -21,13 +21,12 @@ return {
             view = {
                 width = 30,
                 side = "left",
-           }
+            }
         })
     end,
     keys = {
-        { "<leader>nt", "<cmd>NvimTreeToggle<CR>", desc = "Toggle NvimTree" },
-        { "<leader>nr", "<cmd>NvimTreeRefresh<CR>", desc = "Refresh NvimTree" },
+        { "<leader>nt", "<cmd>NvimTreeToggle<CR>",   desc = "Toggle NvimTree" },
+        { "<leader>nr", "<cmd>NvimTreeRefresh<CR>",  desc = "Refresh NvimTree" },
         { "<leader>nf", "<cmd>NvimTreeFindFile<CR>", desc = "Find file in NvimTree" },
     }
 }
-
