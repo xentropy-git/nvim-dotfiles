@@ -50,9 +50,9 @@ M.config = function()
                 maxwidth=50,
                 ellipsis_char="…",
             })
-        }
+        },
     })
-
+    -- Set same diagnostic window to cmp.config.window.bordered()
 	cmp.setup.cmdline(":", {
 		mapping = cmp.mapping.preset.cmdline(),
 		sources = cmp.config.sources({
