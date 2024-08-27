@@ -23,8 +23,11 @@ return {
                 side = "left",
            }
         })
-        vim.keymap.set("n", "<C-n>", ":NvimTreeToggle<CR>")
-
-    end
+    end,
+    keys = {
+        { "<leader>nt", "<cmd>NvimTreeToggle<CR>", desc = "Toggle NvimTree" },
+        { "<leader>nr", "<cmd>NvimTreeRefresh<CR>", desc = "Refresh NvimTree" },
+        { "<leader>nf", "<cmd>NvimTreeFindFile<CR>", desc = "Find file in NvimTree" },
+    }
 }
 

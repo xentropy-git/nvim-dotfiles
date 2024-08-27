@@ -1,2 +1,2 @@
-require("config.lazy")
-require("config.config")
+require("xentropy.lazy")
+require("xentropy.core")

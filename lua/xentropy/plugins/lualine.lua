@@ -1,7 +1,6 @@
 return {
     "nvim-lualine/lualine.nvim",
-    depends = { "kyazdani42/nvim-web-devicons",
-                "nvim-tree/nvim-tree.lua" },
+    depends = { "kyazdani42/nvim-web-devicons" },
     config = function()
         require("lualine").setup({
             options = {
