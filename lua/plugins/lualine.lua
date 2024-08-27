@@ -4,7 +4,9 @@ return {
                 "nvim-tree/nvim-tree.lua" },
     config = function()
         require("lualine").setup({
-            extensions = { "nvim-tree" },
+            options = {
+                disabled_filetypes = { 'NvimTree' },
+            }
         })
     end
 }
