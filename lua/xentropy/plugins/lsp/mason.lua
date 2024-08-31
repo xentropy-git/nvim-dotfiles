@@ -25,6 +25,7 @@ return {
                 "tailwindcss",
                 "lua_ls",
                 "pyright",
+                "omnisharp",
             },
             automatic_installation = true,
         })
